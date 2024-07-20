@@ -1,0 +1,9 @@
+!benchmark/
+!benchmark/jube/
+!benchmark/eval/
+!benchmark/data/
+!src/
+!.archive.mk
+!.convertDESCRIPTION.mk
+!DESCRIPTION.md
+!.baseline.csv

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jube>
+  <benchmark name="osu" outpath="CPU_procure_run">
+    <comment>OSU - v6.2 - CPU</comment>
+
+    <!-- parameters used in compilation step -->
+    <parameterset name="compile_param">        
+      <parameter name="GCC">GCC/12.3.0</parameter>
+      <parameter name="psmpi">ParaStationMPI/5.9.2-1</parameter>
+      <parameter name="load_modules">ml purge; ml Stages/2024; ml ${GCC} ${psmpi}</parameter>
+
+      <parameter name="osu_version">6.2</parameter>
+      <parameter name="src_dir">osu-micro-benchmarks-${osu_version}</parameter>
+    </parameterset>
+
+    <!-- untar OSU directory -->
+    <fileset name="source">
+      <prepare>tar -xf ${jube_benchmark_home}/../../src/${src_dir}.tar.gz</prepare>
+    </fileset>
+
+    <!-- compile OSU benchmark -->
+    <step name="compile">
+      <use>compile_param</use>
+      <use>source</use>
+      <do>${load_modules}</do>
+      <do>cd ${src_dir}; ./configure CC=mpicc CXX=mpicxx --prefix=$$(pwd); make -j 24; make install</do>
+    </step>
+
+    <!-- OSU config parameter -->
+    <parameterset name="osu_param">
+      <parameter name="osu_exe">osu_bw,osu_bibw,osu_latency</parameter>
+      <parameter name="path_tmpl">libexec/osu-micro-benchmarks/mpi/pt2pt/{}</parameter>
+      <parameter name="osu_exe_path" mode="python">"${path_tmpl}".format("${osu_exe}")</parameter>
+      <parameter name="msg_size" type="int" mode="python">"67108864" if "${osu_exe}" in ["osu_bw", "osu_bibw"] else "0"</parameter>
+    </parameterset>
+
+    <!-- set system dependend parameter -->
+    <parameterset name="systemParameter" init_with="platform.xml">
+      <parameter name="i" type="int">0,1</parameter>
+      <parameter name="nodes" type="int" mode="python">[1,2][$i]</parameter>
+      <parameter name="taskspernode" type="int" mode="python">[2,1][$i]</parameter>
+      <parameter name="timelimit">00:05:00</parameter>
+      <parameter name="queue">booster</parameter>
+      <parameter name="gres">gpu:4</parameter>
+      <parameter name="preprocess" separator="|">${load_modules}</parameter>
+      <parameter name="measurement">time -p</parameter>
+      <parameter name="executable">./compile/${src_dir}/${osu_exe_path}</parameter>
+      <parameter name="args_exec">-m ${msg_size}:${msg_size}</parameter>
+      <parameter name="account">jscbenchmark</parameter>
+    </parameterset>
+
+    <!-- generate job script and submit the job -->
+    <step name="execute" depend="compile" suffix="${nodes}_${taskspernode}_${osu_exe}_${msg_size}">
+      <use>osu_param</use>
+      <use>systemParameter</use>
+      <use from="platform.xml">executeset</use>
+      <use from="platform.xml">executesub</use>
+      <use from="platform.xml">jobfiles</use>
+      <do done_file="$done_file">${submit} ${submit_script}</do>
+    </step>
+
+
+    <patternset name="runtime_pat">
+      <pattern mode="pattern" name="runtime" unit="sec" type="float">real ${jube_pat_fp}</pattern>
+    </patternset>
+
+    <patternset name="job_pat">
+      <pattern mode="pattern" name="job_id" type="int">Submitted batch job ${jube_pat_int}</pattern>
+      <pattern name="status" mode="perl">'`sacct --format State -j $job_id | head -n 3 | tail -n 1 | xargs`'</pattern>
+      <pattern name="exit_code" mode="perl">'`sacct --format ExitCode -j $job_id | head -n 3 | tail -n 1 | xargs`'</pattern>
+    </patternset>
+
+    <patternset name="size_pat">
+      <pattern mode="pattern" name="size" type="int">\n${jube_pat_int}</pattern>
+      <pattern mode="pattern" name="result" type="float">${jube_pat_fp}</pattern>
+    </patternset>
+
+    <analyser name="analyse" reduce="false">
+      <analyse step="execute">
+	<file use="runtime_pat">${errlogfile}</file>
+	<file use="size_pat">${outlogfile}</file>
+	<file use="job_pat">stdout</file>
+      </analyse>
+    </analyser>
+
+    <result>
+      <use>analyse</use>
+      <table name="table_pretty" style="pretty" sort="osu_exe,nodes,taskspernode,msg_size">
+        <column>nodes</column>
+        <column>taskspernode</column>
+        <column>osu_exe</column>
+	<column>msg_size</column>
+        <column>runtime</column>
+        <column title="size">size_last</column>
+	<column title="result">result_last</column>
+	<column>job_id</column>
+        <column>status</column>
+      	<column>exit_code</column>
+      </table>
+      <table name="table_csv" style="csv" sort="osu_exe,nodes,taskspernode,msg_size">
+        <column>nodes</column>
+        <column>taskspernode</column>
+        <column>osu_exe</column>
+	<column>msg_size</column>
+        <column>runtime</column>
+        <column title="size">size_last</column>
+	<column title="result">result_last</column>
+	<column>job_id</column>
+        <column>status</column>
+	<column>exit_code</column>
+      </table>
+    </result>
+    
+  </benchmark>
+</jube>

@@ -1,0 +1,25 @@
+table_pretty:
+| system |  mpi | nodes | taskspernode |     osu_exe | msg_size | runtime[sec] |     size |   result |   job_id |    status | exit_code |
+|--------|------|-------|--------------|-------------|----------|--------------|----------|----------|----------|-----------|-----------|
+|   JRDC | ompi |     1 |            2 |    osu_bibw |        1 |         2.26 |        1 |    12.14 | 11123139 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |    osu_bibw |       16 |         2.28 |       16 |   193.02 | 11123140 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |    osu_bibw |  1048576 |         2.49 |  1048576 | 25395.73 | 11123141 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |    osu_bibw |  4194304 |         2.74 |  4194304 | 25489.35 | 11123142 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |    osu_bibw | 67108864 |          9.6 | 67108864 | 25517.21 | 11123143 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |    osu_bibw |        1 |         2.28 |        1 |     6.23 | 11123151 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |    osu_bibw |       16 |         2.28 |       16 |   100.48 | 11123152 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |    osu_bibw |  1048576 |         2.43 |  1048576 | 24508.78 | 11123153 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |    osu_bibw |  4194304 |         2.79 |  4194304 | 24609.21 | 11123154 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |    osu_bibw | 67108864 |         9.96 | 67108864 | 24640.84 | 11123155 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |      osu_bw |        1 |         2.27 |        1 |     9.51 | 11123134 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |      osu_bw |       16 |         2.28 |       16 |   141.55 | 11123135 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |      osu_bw |  1048576 |         2.34 |  1048576 | 22640.42 | 11123136 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |      osu_bw |  4194304 |         2.53 |  4194304 | 23402.17 | 11123137 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 |      osu_bw | 67108864 |         5.99 | 67108864 | 25518.17 | 11123138 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |      osu_bw |        1 |         2.27 |        1 |     3.83 | 11123145 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |      osu_bw |       16 |          2.3 |       16 |    61.53 | 11123146 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |      osu_bw |  1048576 |         2.41 |  1048576 |  12326.4 | 11123147 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |      osu_bw |  4194304 |         2.78 |  4194304 | 12341.44 | 11123148 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 |      osu_bw | 67108864 |         9.97 | 67108864 | 12345.87 | 11123150 | COMPLETED |       0:0 |
+|   JRDC | ompi |     1 |            2 | osu_latency |        0 |         1.93 |        0 |     0.36 | 11123144 | COMPLETED |       0:0 |
+|   JRDC | ompi |     2 |            1 | osu_latency |        0 |          2.3 |        0 |     1.47 | 11123156 | COMPLETED |       0:0 |

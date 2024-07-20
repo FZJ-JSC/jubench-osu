@@ -1,0 +1,47 @@
+table_pretty:
+| system | execute_mode | nodes | taskspernode | cuda_vis |     osu_exe | msg_size | buffer | target | runtime[sec] |     size |    result |  job_id |      status | exit_code |
+|--------|--------------|-------|--------------|----------|-------------|----------|--------|--------|--------------|----------|-----------|---------|-------------|-----------|
+|    JWB |         ompi |     1 |            2 |      0,1 |    osu_bibw |        1 |   cuda |    D D |          2.5 |        1 |       0.7 | 6259683 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |    osu_bibw |        1 |   cuda |    D D |         1.79 |        1 |      0.79 | 6259688 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |    osu_bibw |        1 |   cuda |    D D |         1.85 |        1 |       0.7 | 6259693 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |    osu_bibw |       16 |   cuda |    D D |         2.62 |       16 |     11.26 | 6259684 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |    osu_bibw |       16 |   cuda |    D D |         1.84 |       16 |     12.56 | 6259689 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |    osu_bibw |       16 |   cuda |    D D |         1.83 |       16 |     11.18 | 6259694 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |    osu_bibw |  1048576 |   cuda |    D D |         1.85 |  1048576 | 125610.38 | 6259685 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |    osu_bibw |  1048576 |   cuda |    D D |         1.82 |  1048576 | 126240.99 | 6259690 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |    osu_bibw |  1048576 |   cuda |    D D |         1.88 |  1048576 | 122708.75 | 6259695 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |    osu_bibw |  4194304 |   cuda |    D D |         1.87 |  4194304 | 159197.55 | 6259686 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |    osu_bibw |  4194304 |   cuda |    D D |         1.87 |  4194304 | 159528.42 | 6259691 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |    osu_bibw |  4194304 |   cuda |    D D |         1.83 |  4194304 | 159659.81 | 6259696 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |    osu_bibw | 67108864 |   cuda |    D D |          2.8 | 67108864 |  176514.3 | 6259687 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |    osu_bibw | 67108864 |   cuda |    D D |         2.82 | 67108864 | 176533.53 | 6259692 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |    osu_bibw | 67108864 |   cuda |    D D |         4.81 | 67108864 | 176561.41 | 6259697 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |    osu_bibw |        1 |   cuda |    D D |         2.28 |        1 |      1.78 | 6259706 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |    osu_bibw |       16 |   cuda |    D D |         2.28 |       16 |     28.16 | 6259707 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |    osu_bibw |  1048576 |   cuda |    D D |         2.36 |  1048576 |  34391.24 | 6259708 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |    osu_bibw |  4194304 |   cuda |    D D |         2.63 |  4194304 |  34131.87 | 6259709 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |    osu_bibw | 67108864 |   cuda |    D D |         9.89 | 67108864 |  34554.44 | 6259710 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |      osu_bw |        1 |   cuda |    D D |         2.51 |        1 |      0.47 | 6259667 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |      osu_bw |        1 |   cuda |    D D |          2.8 |        1 |      0.53 | 6259672 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |      osu_bw |        1 |   cuda |    D D |         2.56 |        1 |      0.48 | 6259677 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |      osu_bw |       16 |   cuda |    D D |         2.62 |       16 |      7.69 | 6259668 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |      osu_bw |       16 |   cuda |    D D |         3.17 |       16 |      8.47 | 6259673 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |      osu_bw |       16 |   cuda |    D D |         1.82 |       16 |       7.7 | 6259678 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |      osu_bw |  1048576 |   cuda |    D D |         1.91 |  1048576 |  69532.37 | 6259669 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |      osu_bw |  1048576 |   cuda |    D D |         1.69 |  1048576 |  67926.38 | 6259674 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |      osu_bw |  1048576 |   cuda |    D D |         2.95 |  1048576 |  69053.13 | 6259679 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |      osu_bw |  4194304 |   cuda |    D D |         1.88 |  4194304 |  86128.58 | 6259670 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |      osu_bw |  4194304 |   cuda |    D D |         3.37 |  4194304 |  85767.42 | 6259675 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |      osu_bw |  4194304 |   cuda |    D D |         1.86 |  4194304 |  86165.42 | 6259680 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 |      osu_bw | 67108864 |   cuda |    D D |         3.59 | 67108864 |  93533.15 | 6259671 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 |      osu_bw | 67108864 |   cuda |    D D |         3.93 | 67108864 |  93460.03 | 6259676 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 |      osu_bw | 67108864 |   cuda |    D D |         2.89 | 67108864 |  93558.82 | 6259681 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |      osu_bw |        1 |   cuda |    D D |         1.95 |        1 |      1.56 | 6259701 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |      osu_bw |       16 |   cuda |    D D |         2.28 |       16 |     24.78 | 6259702 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |      osu_bw |  1048576 |   cuda |    D D |         2.33 |  1048576 |   24554.1 | 6259703 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |      osu_bw |  4194304 |   cuda |    D D |         2.09 |  4194304 |  24628.51 | 6259704 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 |      osu_bw | 67108864 |   cuda |    D D |         6.09 | 67108864 |  24545.74 | 6259705 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,1 | osu_latency |        0 |   cuda |    D D |         1.86 |        0 |      0.61 | 6259698 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,2 | osu_latency |        0 |   cuda |    D D |         1.83 |        0 |      0.36 | 6259699 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     1 |            2 |      0,3 | osu_latency |        0 |   cuda |    D D |         1.72 |        0 |      0.61 | 6259700 |  COMPLETED  |      0:0  |
+|    JWB |         ompi |     2 |            1 |        1 | osu_latency |        0 |   cuda |    D D |         2.12 |        0 |       1.8 | 6259711 |  COMPLETED  |      0:0  |

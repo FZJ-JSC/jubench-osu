@@ -1,0 +1,47 @@
+table_pretty:
+| system | execute_mode | nodes | taskspernode | cuda_vis |     osu_exe | msg_size | buffer | target | runtime[sec] | size_last | result_last |  job_id |      status | exit_code |
+|--------|--------------|-------|--------------|----------|-------------|----------|--------|--------|--------------|-----------|-------------|---------|-------------|-----------|
+|    JWB |        psmpi |     1 |            2 |      0,1 |    osu_bibw |        1 |   cuda |    D D |         2.71 |         1 |        0.58 | 6259580 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |    osu_bibw |        1 |   cuda |    D D |          2.7 |         1 |        0.64 | 6259592 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |    osu_bibw |        1 |   cuda |    D D |         2.52 |         1 |        0.54 | 6259603 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |    osu_bibw |       16 |   cuda |    D D |         2.69 |        16 |        9.23 | 6259581 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |    osu_bibw |       16 |   cuda |    D D |         2.77 |        16 |       10.11 | 6259593 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |    osu_bibw |       16 |   cuda |    D D |         4.08 |        16 |        9.04 | 6259604 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |    osu_bibw |  1048576 |   cuda |    D D |         2.76 |   1048576 |   131203.92 | 6259582 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |    osu_bibw |  1048576 |   cuda |    D D |         2.63 |   1048576 |   130283.69 | 6259594 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |    osu_bibw |  1048576 |   cuda |    D D |          2.8 |   1048576 |    129730.0 | 6259605 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |    osu_bibw |  4194304 |   cuda |    D D |         2.77 |   4194304 |   161270.48 | 6259583 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |    osu_bibw |  4194304 |   cuda |    D D |         2.83 |   4194304 |   160887.28 | 6259595 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |    osu_bibw |  4194304 |   cuda |    D D |         2.76 |   4194304 |    161304.9 | 6259606 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |    osu_bibw | 67108864 |   cuda |    D D |         3.73 |  67108864 |   176667.63 | 6259585 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |    osu_bibw | 67108864 |   cuda |    D D |         3.73 |  67108864 |    176676.1 | 6259596 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |    osu_bibw | 67108864 |   cuda |    D D |         3.75 |  67108864 |   176664.84 | 6259609 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |    osu_bibw |        1 |   cuda |    D D |         1.54 |         1 |        0.97 | 6259618 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |    osu_bibw |       16 |   cuda |    D D |         1.55 |        16 |       15.83 | 6259619 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |    osu_bibw |  1048576 |   cuda |    D D |         2.36 |   1048576 |    34622.94 | 6259620 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |    osu_bibw |  4194304 |   cuda |    D D |         2.64 |   4194304 |    35032.02 | 6259621 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |    osu_bibw | 67108864 |   cuda |    D D |         7.53 |  67108864 |    36589.88 | 6259622 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |      osu_bw |        1 |   cuda |    D D |         2.71 |         1 |         0.4 | 6259574 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |      osu_bw |        1 |   cuda |    D D |         3.66 |         1 |         0.4 | 6259587 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |      osu_bw |        1 |   cuda |    D D |         2.73 |         1 |         0.4 | 6259598 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |      osu_bw |       16 |   cuda |    D D |         2.72 |        16 |         6.3 | 6259576 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |      osu_bw |       16 |   cuda |    D D |         2.75 |        16 |        7.23 | 6259588 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |      osu_bw |       16 |   cuda |    D D |         2.73 |        16 |        6.37 | 6259599 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |      osu_bw |  1048576 |   cuda |    D D |         2.68 |   1048576 |    68906.53 | 6259577 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |      osu_bw |  1048576 |   cuda |    D D |         2.74 |   1048576 |     68237.0 | 6259589 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |      osu_bw |  1048576 |   cuda |    D D |         2.72 |   1048576 |     68803.8 | 6259600 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |      osu_bw |  4194304 |   cuda |    D D |         2.85 |   4194304 |    85938.08 | 6259578 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |      osu_bw |  4194304 |   cuda |    D D |         2.78 |   4194304 |    85486.46 | 6259590 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |      osu_bw |  4194304 |   cuda |    D D |         2.76 |   4194304 |     86049.9 | 6259601 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 |      osu_bw | 67108864 |   cuda |    D D |         3.63 |  67108864 |    93510.43 | 6259579 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 |      osu_bw | 67108864 |   cuda |    D D |         3.71 |  67108864 |    93469.86 | 6259591 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 |      osu_bw | 67108864 |   cuda |    D D |          3.7 |  67108864 |     93521.9 | 6259602 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |      osu_bw |        1 |   cuda |    D D |         1.54 |         1 |        0.86 | 6259612 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |      osu_bw |       16 |   cuda |    D D |         1.49 |        16 |       13.45 | 6259614 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |      osu_bw |  1048576 |   cuda |    D D |         1.57 |   1048576 |    24511.52 | 6259615 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |      osu_bw |  4194304 |   cuda |    D D |         1.79 |   4194304 |    24628.11 | 6259616 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 |      osu_bw | 67108864 |   cuda |    D D |         5.32 |  67108864 |     24481.9 | 6259617 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,1 | osu_latency |        0 |   cuda |    D D |         2.68 |         0 |        0.95 | 6259586 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,2 | osu_latency |        0 |   cuda |    D D |         2.69 |         0 |        0.69 | 6259597 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     1 |            2 |      0,3 | osu_latency |        0 |   cuda |    D D |         2.71 |         0 |        0.94 | 6259610 |  COMPLETED  |      0:0  |
+|    JWB |        psmpi |     2 |            1 |        1 | osu_latency |        0 |   cuda |    D D |         2.36 |         0 |        2.18 | 6259623 |  COMPLETED  |      0:0  |
